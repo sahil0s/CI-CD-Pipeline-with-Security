@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # This runs the pipeline when changes are pushed to the main branch
+      - main  # This triggers the pipeline on pushes to the main branch
 
 jobs:
   build:
@@ -13,20 +13,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'  
-
     - name: Install dependencies
       run: npm install
 
-    - name: Run tests
-      run: npm test  # Adjust if your test command is different
+    - name: Build the application
+      run: npm run build
 
-    - name: Deploy to Heroku
-      run: |
-        git remote add heroku https://git.heroku.com/todo-app.git
-        git push heroku main
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v20.0.0
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}  # Your Vercel token
+        vercel-args: '--prod'  # Use '--prod' for production deployment
+        working-directory: .  # Path to your project directory
       env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}  # Ensure you set this secret in GitHub
+        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}  # Your Vercel organization ID
+        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}  # Your Vercel project ID
