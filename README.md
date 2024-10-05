@@ -42,17 +42,17 @@ To run this project locally, you'll need to have the following installed:
 git clone https://github.com/your-username/todo-app.git
 cd todo-app
 ```
-Install Dependencies
+### Install Dependencies
 ```bash
 npm install
 ```
-Run the Application
+### Run the Application
 ```bash
 npm start
 ```
 This will start the application in development mode. Open http://localhost:3000 to view it in your browser.
 
-Usage
+### Usage
 
 1. Add a Todo: Enter a task in the input field and click "Add".
 
@@ -64,7 +64,7 @@ Usage
 
 
 
-CI/CD
+### CI/CD
 
 This project utilizes GitHub Actions for Continuous Integration and Continuous Deployment. Changes pushed to the main branch will automatically trigger a deployment to Vercel.
 
@@ -79,7 +79,7 @@ VERCEL_PROJECT_ID: The ID of your Vercel project.
 VERCEL_ORG_ID: The ID of your Vercel organization.
 
 
-Contributing
+### Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -102,11 +102,11 @@ Contributions are welcome! Please follow these steps:
 
 
 
-License
+### License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgments
+### Acknowledgments
 
 Inspiration and libraries from the React community.
 
