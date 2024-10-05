@@ -41,15 +41,15 @@ To run this project locally, you'll need to have the following installed:
 ```bash
 git clone https://github.com/your-username/todo-app.git
 cd todo-app
-
+```
 Install Dependencies
-
+```bash
 npm install
-
+```
 Run the Application
-
+```bash
 npm start
-
+```
 This will start the application in development mode. Open http://localhost:3000 to view it in your browser.
 
 Usage
@@ -112,10 +112,9 @@ Inspiration and libraries from the React community.
 
 Special thanks to the contributors and the open-source community.
 
-
+```bash
 ### Customization Tips:
 - Replace your-username with your actual GitHub username in the clone link.
 - Add any specific commands or features that are unique to your application.
 - Feel free to adjust sections to better fit your project's characteristics and goals.
-
-This README template provides a solid foundation and helps others understand how to use your project and how to contribute. Let me know if you need any more assistance or modifications!
+```
